@@ -1,5 +1,5 @@
 #==============================================================================
-# .zshrc - last update 20131212
+# .zshrc - last update 20131214
 #==============================================================================
 # Executes commands at the start of an interactive session.
 
@@ -13,97 +13,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd beep nomatch notify correctall
-
 bindkey -v
-bindkey '\e[3~' delete-char
-bindkey '^R' history-incremental-search-backward
-bindkey '^N' history-incremental-search-forward
-
-# -- miscellaneous ------------------------------------------------------------
-alias mv='mv -i'
-alias cp='cp -i'
-
-# -- moving into and from directories -----------------------------------------
-# do not forget j(ump) and 'cd -' !
-cd () {
-    case "$*" in
-        '' )
-            pushd $HOME > /dev/null
-        ;;
-        '...' )
-            pushd '../..' > /dev/null
-        ;;
-        '....' )
-            pushd '../../..' > /dev/null
-        ;;
-        '.....' )
-            pushd '../../../..' > /dev/null
-        ;;
-        * )
-            pushd "$*" > /dev/null
-        ;;
-    esac
-}
-alias '..'='cd ..'
-alias '...'='cd ../..'
-alias '....'='cd ../../..'
-alias '.....'='cd ../../../..'
-alias p='pushd'
-alias o='popd'
-alias b='popd' #backward
-alias d='dirs -v'
-alias 1='pushd +1'
-alias 2='pushd +2'
-alias 3='pushd +3'
-alias 4='pushd +4'
-alias 5='pushd +5'
-alias 6='pushd +6'
-alias 7='pushd +7'
-alias 8='pushd +8'
-alias 9='pushd +9'
-
-# -- ls -----------------------------------------------------------------------
-# FIXME - does not work when arg contains a space
-## extended_ls provides dot shortcuts to ls
-#extended_ls () {
-# # DEBUG echo "args before=${@} - ${#} args"
-# local args=''
-# for arg in ${*}
-# do
-# # DEBUG echo "arg=${arg}"
-# case ${arg} in
-# '...' )
-# args="${args} ../.."
-# ;;
-# '....' )
-# args="${args} ../../.."
-# ;;
-# '.....' )
-# args="${args} ../../../.."
-# ;;
-# * )
-# args="${args} ${arg}"
-# ;;
-# esac
-# done
-# #DEBUG - echo "args after=${args}"
-# command ls --color=always ${args}
-#}
-## ls options shortcuts
-#alias ls='extended_ls'
-#alias lf='extended_ls -F'
-#alias ll='extended_ls -l'
-#alias lh='extended_ls -lh'
-#alias la='extended_ls -la'
-#alias lt='extended_ls -lrt'
-
-# ls options shortcuts
-alias ls='ls --color=always'
-alias lf='ls -F'
-alias ll='ls -l'
-alias lh='ls -lh'
-alias la='ls -la'
-alias lt='ls -lrt'
 
 # -- vim ----------------------------------------------------------------------
 # we want to use gvim (vim-X11) with full options instead of vim
@@ -113,7 +23,6 @@ alias vi='gvim'
 set -o vi
 
 # -- grep ---------------------------------------------------------------------
-# TODO - --exclude-from=FILE
 export GREP_OPTIONS='-nRI --color=always
 --exclude-dir=__pycache__ --exclude-dir=.nodeproject
 --exclude-dir=CVS --exclude-dir=SVN --exclude-dir=.git --exclude-dir=.hg

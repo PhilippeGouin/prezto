@@ -1,9 +1,7 @@
-#
+#==============================================================================
+# .zpreztorc - last update 20131214
+#==============================================================================
 # Sets Prezto options.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 #
 # General
@@ -24,22 +22,22 @@ zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
+    'environment' \
     'archive' \
     'command-not-found' \
-    'completion' \
     'directory' \
     'editor' \
-    'environment' \
     'git' \
-    'history-substring-search' \
     'history' \
-    'prompt' \
     'python' \
     'spectrum' \
-    'syntax-highlighting' \
     'terminal' \
     'utility' \
-    'yum'
+    'completion' \
+    'yum' \
+    'syntax-highlighting' \
+    'history-substring-search' \
+    'prompt'
 
 #
 # Editor
@@ -153,4 +151,3 @@ zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
-

@@ -12,10 +12,12 @@ fi
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd beep nomatch notify
+setopt appendhistory autocd beep nomatch notify correctall
+
 bindkey -v
 bindkey '\e[3~' delete-char
 bindkey '^R' history-incremental-search-backward
+bindkey '^N' history-incremental-search-forward
 
 # -- miscellaneous ------------------------------------------------------------
 alias mv='mv -i'

@@ -34,6 +34,8 @@ export GREP_OPTIONS='-nRI --color=always
 # zsh requires yum install autojump-zsh !
 alias jumpstat='autojump --stat'
 
-# -- the following lines were added by compinstall ----------------------------
-zstyle :compinstall filename '/home/philippe/.zshrc'
-autoload -Uz compinit && compinit
+# -- suffix aliases -----------------------------------------------------------
+alias -s txt=vim
+alias -s pdf=okular
+
+# -- global aliases -----------------------------------------------------------

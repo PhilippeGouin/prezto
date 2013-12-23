@@ -1,5 +1,5 @@
 #==============================================================================
-# .zshrc - last update 20131214
+# .zshrc - last update 20131223
 #==============================================================================
 # Executes commands at the start of an interactive session.
 
@@ -14,6 +14,18 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd beep nomatch notify correctall
 bindkey -v
+
+# -- persist the dirstack across sessions -------------------------------------
+# trick: cd -(tab)
+DIRSTACKSIZE=9
+DIRSTACKFILE=~/.zdirs
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+    dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+    [[ -d $dirstack[1] ]] && cd $dirstack[1] && cd $OLDPWD
+fi
+chpwd() {
+    print -l $PWD ${(u)dirstack} >|$DIRSTACKFILE
+}
 
 # -- vim ----------------------------------------------------------------------
 # we want to use gvim (vim-X11) with full options instead of vim

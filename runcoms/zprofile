@@ -1,5 +1,5 @@
 #==============================================================================
-# .zprofile - last update 20131214
+# .zprofile - last update 20140207
 #==============================================================================
 # Executes commands at login pre-zshrc.
 
@@ -64,7 +64,9 @@ fi
 #------------------------------------------------------------------
 # Linux logo
 #------------------------------------------------------------------
-[ -x /usr/bin/linux_logo ] && { echo; linux_logo -a -c -d -f -k -u -y;}
+if [[ -o login ]]; then
+    [ -x /usr/bin/linux_logo ] && { echo; linux_logo -a -c -d -f -k -u -y;}
+fi
 
 #------------------------------------------------------------------
 # User specific environment and startup programs

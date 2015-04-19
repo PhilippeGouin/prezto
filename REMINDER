@@ -1,0 +1,9 @@
+Configure git with the base repo:
+    git remote add upstream https://github.com/sorin-ionescu/prezto.git
+
+To update from the cloned repo:
+    git fetch upstream
+[https://help.github.com/articles/fork-a-repo]
+
+Update the submodules:
+    git submodule update --init --recursive

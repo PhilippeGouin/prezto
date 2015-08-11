@@ -1,5 +1,5 @@
 #==============================================================================
-# .zprofile - last update 20140207
+# .zprofile - last update 20141030
 #==============================================================================
 # Executes commands at login pre-zshrc.
 
@@ -34,6 +34,9 @@ path=(
   $HOME/.local/{bin,sbin}
   $path
 )
+
+# Vagrant
+export VAGRANT_HOME='/mnt/seagate_HD_2T/vagrant/vagrant.d'
 
 #------------------------------------------------------------------
 # Less

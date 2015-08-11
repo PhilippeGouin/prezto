@@ -31,6 +31,7 @@ chpwd() {
 # we want to use gvim (vim-X11) with full options instead of vim
 alias vim='gvim'
 alias vi='gvim'
+alias v='gvim'
 # vi for readline
 set -o vi
 

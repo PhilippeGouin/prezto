@@ -1,5 +1,5 @@
 #==============================================================================
-# .zshrc - last update 20131223
+# .zshrc - last update 20150807
 #==============================================================================
 # Executes commands at the start of an interactive session.
 
@@ -36,11 +36,11 @@ alias v='gvim'
 set -o vi
 
 # -- grep ---------------------------------------------------------------------
-export GREP_OPTIONS='-nRI --color=always
---exclude-dir=__pycache__ --exclude-dir=.nodeproject
---exclude-dir=CVS --exclude-dir=SVN --exclude-dir=.git --exclude-dir=.hg
---exclude-dir=backup
---exclude=\*.tmp --exclude=\*~
+alias grep='grep -nRI --color=always \
+--exclude-dir=__pycache__ --exclude-dir=.nodeproject \
+--exclude-dir=CVS --exclude-dir=SVN --exclude-dir=.git --exclude-dir=.hg \
+--exclude-dir=backup \
+--exclude=\*.tmp --exclude=\*~ \
 '
 
 # -- autojump -----------------------------------------------------------------
@@ -52,3 +52,4 @@ alias -s txt=vim
 alias -s pdf=okular
 
 # -- global aliases -----------------------------------------------------------
+# Customize to your needs...

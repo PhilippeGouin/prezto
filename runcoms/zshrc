@@ -53,3 +53,4 @@ alias -s pdf=okular
 
 # -- global aliases -----------------------------------------------------------
 # Customize to your needs...
+alias tree='tree -C'

@@ -35,9 +35,6 @@ path=(
   $path
 )
 
-# Vagrant
-export VAGRANT_HOME='/mnt/seagate_HD_2T/vagrant/vagrant.d'
-
 #------------------------------------------------------------------
 # Less
 #------------------------------------------------------------------
@@ -87,4 +84,6 @@ export ftp_proxy='ftp://direct.proxy.i2'
 #------------------------------------------------------------------
 # Vagrant
 #------------------------------------------------------------------
-export VAGRANT_HOME='/mnt/phildoc/informatique/boxes/vagrant/'
+# export VAGRANT_HOME='/mnt/phildoc/informatique/boxes/vagrant/'
+export VAGRANT_HOME='/mnt/seagate_HD_2T/vagrant/vagrant.d'
+

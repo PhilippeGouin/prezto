@@ -16,3 +16,12 @@ export WORKON_HOME="${HOME}/.virtualenvs"
 export PROJECT_HOME="${HOME}/devel/"
 # export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 source /usr/bin/virtualenvwrapper.sh
+
+# Proxies
+export http_proxy='http://direct.proxy.i2:8080'
+export https_proxy='http://direct.proxy.i2:8080'
+export ftp_proxy='ftp://direct.proxy.i2'
+
+# Vagrant
+# export VAGRANT_HOME='/mnt/phildoc/informatique/boxes/vagrant/'
+export VAGRANT_HOME='/mnt/seagate_HD_2T/vagrant/vagrant.d'

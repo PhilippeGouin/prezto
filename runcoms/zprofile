@@ -1,5 +1,5 @@
 #==============================================================================
-# .zprofile - last update 20141030
+# .zprofile - last update 20150817
 #==============================================================================
 # Executes commands at login pre-zshrc.
 
@@ -70,20 +70,6 @@ if [[ -o login ]]; then
 fi
 
 #------------------------------------------------------------------
-# User specific environment and startup programs
-#------------------------------------------------------------------
-# export http_proxy='http://direct.proxy.i2:8080'
-# export https_proxy='http://direct.proxy.i2:8080'
-# export ftp_proxy='ftp://direct.proxy.i2'
-
-#------------------------------------------------------------------
 # Defragmentation des bases sqlite de Firefox
 #------------------------------------------------------------------
 # for f in ~/.mozilla/firefox/*/*.sqlite; do sqlite3 $f "VACUUM;" 2>/dev/null; done
-
-#------------------------------------------------------------------
-# Vagrant
-#------------------------------------------------------------------
-# export VAGRANT_HOME='/mnt/phildoc/informatique/boxes/vagrant/'
-export VAGRANT_HOME='/mnt/seagate_HD_2T/vagrant/vagrant.d'
-
